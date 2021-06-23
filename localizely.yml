@@ -16,9 +16,9 @@ upload: # Required.
       - updated
 download: # Required.
   files: # Required. List of files for download from Localizely.
-    - file: lib/l10n/app_en.arb # Required. Path to the translation file
+    - file: l10n/app_en.arb # Required. Path to the translation file
       locale_code: en # Required. Locale code for the file. Examples: en, de-DE, zh-Hans-CN
-    - file: lib/l10n/app_es.arb # Required. Path to the translation file
+    - file: l10n/app_es.arb # Required. Path to the translation file
       locale_code: es # Required. Locale code for the file. Examples: en, de-DE, zh-Hans-CN
   params:
     export_empty_as: empty # Optional, default: empty. How you would like empty translations to be exported. Allowed values are `empty` to keep empty, `main` to replace with the main language value, or `skip` to omit.
