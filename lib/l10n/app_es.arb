@@ -1,3 +1,23 @@
 {
-    "helloWorld": "Hola Mundo!"
+  "@@locale": "es",
+  "cool": "",
+  "@cool": {
+    "description": "Cool stuff"
+  },
+  "helloWorld": "",
+  "@helloWorld": {},
+  "intro.new-key": "",
+  "@intro.new-key": {},
+  "intro.not-reviewed-text": "",
+  "@intro.not-reviewed-text": {},
+  "intro.too-long-text": "",
+  "@intro.too-long-text": {},
+  "intro.welcome": "",
+  "@intro.welcome": {
+    "description": "This is a description of a key so that the translator better understands the context"
+  },
+  "page.home.counter": "",
+  "@page.home.counter": {},
+  "page.home.title": "",
+  "@page.home.title": {}
 }
