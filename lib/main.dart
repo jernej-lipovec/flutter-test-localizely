@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:localizely_sdk/localizely_sdk.dart'; // Import
 
 void main() {
+  Localizely.init('e6fd9d4c33ca45049ea798d652a0670f0afc0e7b',
+      '4996aa2c58ff4136a88b3b1409d1180b'); // Init sdk
   runApp(MyApp());
 }
 
@@ -10,6 +15,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      locale: Locale("es"),
+      localizationsDelegates: [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        const Locale('en', ''), // English, no country code
+        const Locale('es', ''), // Spanish, no country code
+      ],
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -47,6 +63,20 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  bool _isLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    Localizely.updateTranslations().then(
+        (response) => setState(() {
+              _isLoading = false;
+            }),
+        onError: (error) => setState(() {
+              print(error);
+              _isLoading = false;
+            }));
+  }
 
   void _incrementCounter() {
     setState(() {
@@ -61,6 +91,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    var local = AppLocalizations.of(context);
+    var oe = 5;
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
@@ -71,7 +103,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        title: Text(local!.helloWorld),
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it

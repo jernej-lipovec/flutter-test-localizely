@@ -3,7 +3,7 @@ project_id: 100b9cef-ad30-4abd-a417-168e2b5d8f3e # Required. Your project ID fro
 file_type: flutter_arb # Required. Available values : android_xml, ios_strings, ios_stringsdict, java_properties, rails_yaml, flutter_arb, dotnet_resx, json
 upload: # Required.
   files: # Required. List of files for upload to Localizely. Usually, it is just one file used for the main locale
-    - file: lib/l10n/app_en.arb # Required. Path to the translation file
+    - file: lib/l10n/intl_en.arb # Required. Path to the translation file
       locale_code: en # Required. Locale code for the file. Examples: en, de-DE, zh-Hans-CN
   params: # Optional.
     overwrite: true # Optional, default: false. If the translation in a given language should be overwritten with modified translation from uploading file.
@@ -16,9 +16,9 @@ upload: # Required.
       - updated
 download: # Required.
   files: # Required. List of files for download from Localizely.
-    - file: lib/l10n/app_en.arb # Required. Path to the translation file
+    - file: lib/l10n/intl_en.arb # Required. Path to the translation file
       locale_code: en # Required. Locale code for the file. Examples: en, de-DE, zh-Hans-CN
-    - file: lib/l10n/app_es.arb # Required. Path to the translation file
+    - file: lib/l10n/intl_es.arb # Required. Path to the translation file
       locale_code: es # Required. Locale code for the file. Examples: en, de-DE, zh-Hans-CN
   params:
     export_empty_as: empty # Optional, default: empty. How you would like empty translations to be exported. Allowed values are `empty` to keep empty, `main` to replace with the main language value, or `skip` to omit.
