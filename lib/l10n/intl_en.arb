@@ -1,1 +1,29 @@
-{}
+{
+  "@@locale": "en",
+  "cool": "Cool!",
+  "@cool": {
+    "description": "Cool stuff"
+  },
+  "helloWorld": "Hello World!",
+  "@helloWorld": {},
+  "intro.new-key": "New keys created during import can be auto-tagged so that managers and translators know what keys miss translation.",
+  "@intro.new-key": {},
+  "intro.not-reviewed-text": "This is a translation with notification, which indicates the translation is not reviewed.",
+  "@intro.not-reviewed-text": {},
+  "intro.too-long-text": "This is a translation with notification, which indicates text exceeds its intended length.",
+  "@intro.too-long-text": {},
+  "intro.welcome": "Hi {firstName}, welcome to Localizely! This is a sample project where you can explore the features.",
+  "@intro.welcome": {
+    "description": "This is a description of a key so that the translator better understands the context"
+  },
+  "millo": "{css, plural, zero{dasd {firstName}} one{} other{}}",
+  "@millo": {
+    "placeholders": {
+      "firstName": {}
+    }
+  },
+  "page.home.counter": "You have pushed the button this many times",
+  "@page.home.counter": {},
+  "page.home.title": "Sample project Home Page",
+  "@page.home.title": {}
+}
